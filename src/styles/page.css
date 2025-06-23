@@ -1,0 +1,68 @@
+:root {
+  --black: #000000;
+  --blue: #14213d;
+  --orange: #fca311;
+  --gray: #e5e5e5;
+  --white: #fff;
+}
+
+*:root {
+  background-color: var(--black);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 98vh;
+}
+
+.info-container {
+  /* align-self: center; */
+  width: 32vw;
+  height: 95vh;
+  background-color: var(--blue);
+  border-radius: 30px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-box {
+  width: 90%;
+  height: 30%;
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray);
+  box-shadow: 4px 4px 0px 0px var(--black);
+}
+
+.console-box {
+  height: 95%;
+  width: 90%;
+  border: 3px solid var(--black);
+  border-radius: 10px;
+  background-color: var(--gray);
+  box-shadow: 4px 4px 0px 0px var(--black);
+}
+
+.box-title {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  height: min-content;
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: 0px 1px 2px 0px var(--black);
+}
+
+.box-title h1 {
+  font-size: large;
+}
