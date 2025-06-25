@@ -27,6 +27,13 @@ export default function Home() {
           <div className="box-title">
             <h1>DM</h1>
           </div>
+          <div className="ai-container">
+            <div className="ai-text"></div>
+          </div>
+          <div className="input-container">
+            <input className="input-box"></input>
+            <button className="input-send">▶</button>
+          </div>
         </div>
       </div>
       {/* Right Panel */}
