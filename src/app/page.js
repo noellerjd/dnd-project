@@ -1,4 +1,8 @@
 import "../styles/page.css";
+import "../styles/dice.css";
+import Dice from "./components/dice";
+import diceList from "../data/dice.json";
+import { FaDiceD20, FaPlus, FaMinus, FaPlayCircle } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -8,6 +12,29 @@ export default function Home() {
         <div className="info-box">
           <div className="box-title">
             <h1>Dice</h1>
+          </div>
+          <div className="dice-container">
+            {diceList.map((die, i) => (
+              <Dice key={i} dice={die.dice} num={die.num} />
+            ))}
+          </div>
+          <div className="dice-tracker">
+            <div className="dice-info">
+              <button className="dice-control">
+                <FaMinus />
+              </button>
+              <p>
+                # of dice: <span>1</span>
+              </p>
+              <button className="dice-control">
+                <FaPlus />
+              </button>
+            </div>
+          </div>
+          <div className="roll-box">
+            <button id="roll">
+              <FaDiceD20 />
+            </button>
           </div>
         </div>
         <div className="info-box">
@@ -31,8 +58,10 @@ export default function Home() {
             <div className="ai-text"></div>
           </div>
           <div className="input-container">
-            <input className="input-box"></input>
-            <button className="input-send">▶</button>
+            <textarea className="input-box"></textarea>
+            <button className="input-send">
+              <FaPlayCircle />
+            </button>
           </div>
         </div>
       </div>
