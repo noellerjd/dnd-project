@@ -1,4 +1,7 @@
 import "../styles/page.css";
+import "../styles/dice.css";
+import Dice from "./components/dice";
+import diceList from "../data/dice.json";
 
 export default function Home() {
   return (
@@ -8,6 +11,20 @@ export default function Home() {
         <div className="info-box">
           <div className="box-title">
             <h1>Dice</h1>
+          </div>
+          <div className="dice-container">
+            {diceList.map((die, i) => (
+              <Dice key={i} dice={die.dice} num={die.num} />
+            ))}
+          </div>
+          <div className="dice-tracker">
+            <div className="dice-info">
+              <button className="dice-control">+</button>
+              <p>
+                # of dice: <span>1</span>
+              </p>
+              <button className="dice-control">-</button>
+            </div>
           </div>
         </div>
         <div className="info-box">
