@@ -2,6 +2,7 @@ import "../styles/page.css";
 import "../styles/dice.css";
 import Dice from "./components/dice";
 import diceList from "../data/dice.json";
+import { FaDiceD20, FaPlus, FaMinus } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -19,12 +20,21 @@ export default function Home() {
           </div>
           <div className="dice-tracker">
             <div className="dice-info">
-              <button className="dice-control">+</button>
+              <button className="dice-control">
+                <FaPlus />
+              </button>
               <p>
                 # of dice: <span>1</span>
               </p>
-              <button className="dice-control">-</button>
+              <button className="dice-control">
+                <FaMinus />
+              </button>
             </div>
+          </div>
+          <div className="roll-box">
+            <button id="roll">
+              <FaDiceD20 />
+            </button>
           </div>
         </div>
         <div className="info-box">
