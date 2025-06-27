@@ -2,7 +2,8 @@ import "../styles/page.css";
 import "../styles/dice.css";
 import Dice from "./components/dice";
 import diceList from "../data/dice.json";
-import { FaDiceD20, FaPlus, FaMinus, FaPlayCircle } from "react-icons/fa";
+import { FaDiceD20, FaPlus, FaMinus } from "react-icons/fa";
+import { GiDiceFire } from "react-icons/gi";
 
 export default function Home() {
   return (
@@ -60,7 +61,7 @@ export default function Home() {
           <div className="input-container">
             <textarea className="input-box"></textarea>
             <button className="input-send">
-              <FaPlayCircle />
+              <GiDiceFire />
             </button>
           </div>
         </div>
