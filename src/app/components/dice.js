@@ -1,7 +1,7 @@
-export default function Dice(props) {
+export default function Dice({ dice, num, onClick }) {
   return (
-    <div className="dice-box">
-      <p alt={props.dice}>{props.dice}</p>
+    <div className="dice-box" onClick={() => onClick(num)}>
+      <p alt={dice}>{dice}</p>
     </div>
   );
 }
