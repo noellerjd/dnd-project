@@ -91,3 +91,23 @@
   color: var(--blue);
   background-color: var(--orange);
 }
+
+.results-box {
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.dice-animation-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  align-content: center;
+}
+
+.rolling-icon {
+  font-size: x-large;
+}

@@ -2,8 +2,8 @@
 
 import "../styles/page.css";
 import "../styles/dice.css";
-import Dice from "./components/dice";
-import DiceAnimation from "./components/diceAnimation";
+import Dice from "./components/Dice";
+import DiceAnimation from "./components/DiceAnimation";
 import diceList from "../data/dice.json";
 import { FaDiceD20, FaPlus, FaMinus } from "react-icons/fa";
 import { GiDiceFire } from "react-icons/gi";
@@ -68,6 +68,13 @@ export default function Home() {
     localStorage.setItem("rollHistory", JSON.stringify(newHistory));
   };
 
+  // Roll History Logic
+  const historyData = localStorage.getItem("rollHistory");
+
+  if (historyData) {
+    console.log(historyData);
+  }
+
   return (
     <div id="main-container">
       {/* Left Panel */}
@@ -104,7 +111,9 @@ export default function Home() {
           <div className="box-title">
             <h1>Dice Animation</h1>
           </div>
-          <DiceAnimation results={rollResults} />
+          <div className="results-box">
+            <DiceAnimation results={rollResults} />
+          </div>
         </div>
         <div className="info-box">
           <div className="box-title">
